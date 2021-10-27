@@ -127,6 +127,7 @@ a.brand {
 }
 .row.center {
   justify-content: center;
+  
 }
 .row.top {
   align-items: flex-start;
@@ -208,6 +209,8 @@ img.large {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
   border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem;
 }
 .card-body {
@@ -336,18 +339,7 @@ img.large {
 .active {
   font-weight: bold;
 }
-@media only screen and (max-device-width: 480px) {
-  .search input {
-    width: 80px;
-  }
-  header .row {
-    padding-left: 0.1rem;
-    padding-right: 0.3rem;
-  }
-  a.brand {
-    font-size: 2rem;
-  }
-}
+
 
 /* Map */
 .full-container {
@@ -488,4 +480,81 @@ img.large {
 }
 .support-users .unread {
   background-color: #f02020;
+}
+
+
+/*Navabr button hide*/
+
+.burger{
+  display: none;
+  
+  align-items: center;
+  
+}
+
+/* #hidden{
+  display: flex;
+} */
+
+@media only screen and (max-device-width: 375px) {
+  /* hide search bar*/
+  .search{
+    display: none;
+  }
+
+  /* navbar*/
+  .burger{
+      display: flex;
+      align-items: center;
+  }
+
+  .links{
+    display: none;
+  }
+
+  #hidden{
+    position: relative;
+    left: 0px;
+    top: 50px;
+    height: auto;
+    width: 100%;
+    background-color:#5e558d ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 200px;
+  } 
+
+  .topSeller{
+    height: 100px;
+  }
+
+} 
+
+@media only screen and (max-device-width: 998px){
+
+  /* hide search bar*/
+  .search{
+    display: none;
+  }
+
+  /* navbar*/
+  .burger{
+      display: flex;
+  }
+
+  .links{
+    display: none;
+  }
+
+  #hidden{
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    height: auto;
+    width: 100%;
+    background-color:#5e558d ;
+    display: flex;
+    flex-direction: column;
+  }
 }
